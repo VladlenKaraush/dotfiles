@@ -54,7 +54,7 @@ if not vim.loop.fs_stat(lazypath) then
     'clone',
     '--filter=blob:none',
     'https://github.com/folke/lazy.nvim.git',
-    '--branch=stable',     -- latest stable release
+    '--branch=stable', -- latest stable release
     lazypath,
   }
 end
@@ -288,6 +288,9 @@ require('lazy').setup({
       -- your configuration comes here
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
+    },
+    {
+      'justinmk/vim-sneak'
     }
   },
 
@@ -531,7 +534,7 @@ vim.defer_fn(function()
     incremental_selection = {
       enable = true,
       keymaps = {
-        init_selection = '<c-space>',
+        init_selection = '<D-w>',
         --node_incremental = '<c-space>',
         --node_incremental = '<S-w>',
         node_incremental = '<D-w>',
@@ -542,7 +545,7 @@ vim.defer_fn(function()
     textobjects = {
       select = {
         enable = true,
-        lookahead = true,         -- Automatically jump forward to textobj, similar to targets.vim
+        lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
         keymaps = {
           -- You can use the capture groups defined in textobjects.scm
           ['aa'] = '@parameter.outer',
@@ -555,7 +558,7 @@ vim.defer_fn(function()
       },
       move = {
         enable = true,
-        set_jumps = true,         -- whether to set jumps in the jumplist
+        set_jumps = true, -- whether to set jumps in the jumplist
         goto_next_start = {
           [']m'] = '@function.outer',
           [']]'] = '@class.outer',
@@ -770,9 +773,9 @@ require('neoclip').setup({
         --paste = '<c-p>',
         paste = { 'p', '<c-p>', '<cr>' },
         paste_behind = '<c-k>',
-        replay = '<c-q>',         -- replay a macro
-        delete = '<c-d>',         -- delete an entry
-        edit = '<c-e>',           -- edit an entry
+        replay = '<c-q>', -- replay a macro
+        delete = '<c-d>', -- delete an entry
+        edit = '<c-e>',   -- edit an entry
         custom = {},
       },
       n = {
