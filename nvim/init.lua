@@ -817,5 +817,6 @@ require('neoclip').setup({
 vim.keymap.set('n', '<leader>zz', ':ZenMode<cr>')
 vim.opt.cmdheight = 0
 vim.cmd.colorscheme 'melange'
+vim.filetype.add({ extension = { templ = "templ" } })
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
